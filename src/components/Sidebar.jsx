@@ -10,9 +10,13 @@ export default function Sidebar() {
       <div className="wrapper">
         <div className="top">
           <div>
-            <Avatar />
+            <Avatar src="" heigth={45} width={45} />
           </div>
-          <div className="app-icon" onClick={() => setNewChat((prev) => !prev)}>
+          {newChat && <span className="heading">Add Conversation</span>}
+          <div
+            className={newChat ? "app-icon active" : "app-icon"}
+            onClick={() => setNewChat((prev) => !prev)}
+          >
             <i className="fa-solid fa-plus"></i>
           </div>
         </div>
