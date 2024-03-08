@@ -1,0 +1,18 @@
+.profile {
+  position: absolute;
+  width: 350px;
+  min-height: 100vh;
+  height: 100%;
+  background-color: var(--blue);
+  color: var(--white);
+  transition: all 0.5s;
+  transform: translateX(-100%);
+  opacity: 0;
+  z-index: 100;
+}
+
+.profile.active {
+  display: flex;
+  opacity: 1;
+  transform: translateX(0);
+}

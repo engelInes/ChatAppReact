@@ -2,14 +2,19 @@ import { useState } from "react";
 import "../assets/css/sidebar.css";
 import ChatItem from "./ChatItem";
 import ContactItem from "./ContactItem";
+import Profile from "./Profile";
 
-export default function Sidebar() {
+export default function Sidebar({ setChat }) {
   const [newChat, setNewChat] = useState(false);
+  const [onProfile, setOnProfile] = useState(false);
+
+  console.log(onProfile);
   return (
     <div className="sidebar">
+      <Profile open={onProfile} setOpen={setOnProfile} />
       <div className="wrapper">
         <div className="top">
-          <div>
+          <div style={{ cursor: "pointer" }} onClick={() => setOnProfile(true)}>
             <Avatar src="" heigth={45} width={45} />
           </div>
           {newChat && <span className="heading">Add Conversation</span>}
@@ -37,7 +42,7 @@ export default function Sidebar() {
             ) : (
               <div className="items-wrapper">
                 {[...Array(50)].map((chat, index) => (
-                  <ChatItem key={index} />
+                  <ChatItem setChat={setChat} key={index} />
                 ))}
               </div>
             )}
