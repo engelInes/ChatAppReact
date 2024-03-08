@@ -7,10 +7,10 @@ export default function ChatItem({ setChat }) {
       <Avatar src="" height={55} width={55} />
       <div className="chat-item-infos">
         <div className="avatar-infos">
-          <span className="username">John Doe</span>
-          <span className="timeline">2 days ago</span>
+          <span className="username">Ines Engel</span>
+          <span className="timeline">1h ago</span>
         </div>
-        <p className="last-message">Say hi! to John Doe</p>
+        <p className="last-message">Say hi! to Ines Engel</p>
       </div>
     </div>
   );
