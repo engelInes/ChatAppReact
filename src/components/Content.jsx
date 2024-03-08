@@ -48,11 +48,10 @@ export default function Content({ chat, setChat }) {
               {msgImages.length > 0 && onViewer ? (
                 <div className="image-viewer-wrapper">
                   <ImageSlider images={msgImages} onClose={closeImageViewer} />
-                  <button onClick={closeImageViewer}>close</button>
                 </div>
               ) : (
                 <div className="messages-wrapper">
-                  {messages.map((msg, index) => (
+                  {messages.map((msg) => (
                     <Message
                       key={msg?.id}
                       msg={msg}
@@ -64,10 +63,10 @@ export default function Content({ chat, setChat }) {
               )}
             </div>
             <div className="bottom">
-              <textarea placeholder="Write a message" />
               <div className="app-icon">
                 <i className="fa-solid fa-image"></i>
               </div>
+              <textarea placeholder="Write a message" />
               <div className="app-icon">
                 <i className="fa-solid fa-paper-plane"></i>
               </div>

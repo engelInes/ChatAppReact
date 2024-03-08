@@ -34,6 +34,8 @@
   background-color: transparent;
 }
 
+/* added this for the scrollbar */
+
 html {
   overflow-x: hidden;
   scroll-behavior: smooth;

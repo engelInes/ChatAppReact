@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "../assets/css/profile.css";
 import Avatar from "./Avatar";
 
